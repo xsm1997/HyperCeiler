@@ -1,27 +1,6 @@
 name: CI Build
 
 on:
-  pull_request:
-    types: [opened, synchronize]
-    paths-ignore:
-      - ".github/**"
-      - "!.github/workflows/**"
-      - ".idea/"
-      - "doc/*"
-      - "*.md"
-      - "app/src/assets/**"
-      - ".github/workflows/crowdin.yml"
-      - "crowdin.yml"
-  push:
-    branches: [main]
-    paths-ignore:
-      - ".github/**"
-      - "!.github/workflows/**"
-      - ".idea/"
-      - "doc/*"
-      - "*.md"
-      - "app/src/assets/**"
-      - "crowdin.yml"
   workflow_dispatch:
 
 jobs:
