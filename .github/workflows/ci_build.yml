@@ -35,7 +35,8 @@ jobs:
           echo ${{ secrets.SIGNING_KEY }} | base64 --decode > key.jks
 
       - name: Build with Gradle (Canary)
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+#        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: false
         shell: bash
         run: |
           ./gradlew assembleCanary
@@ -43,7 +44,6 @@ jobs:
 
       - name: Build with Gradle (Debug)
 #        if: github.event_name == 'pull_request'
-        if: false
         shell: bash
         run: |
           ./gradlew assembleDebug
