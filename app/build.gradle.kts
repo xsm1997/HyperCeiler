@@ -232,6 +232,12 @@ dependencies {
     implementation(libs.lyric.getter.api)
     implementation(libs.lunarcalendar)
 
+    api(
+        fileTree(
+            mapOf("dir" to "$rootDir/provision/libs", "include" to listOf("*-debug.aar"))
+        )
+    )
+
     implementation(project(":provision"))
     implementation(project(":processor"))
     annotationProcessor(project(":processor"))
