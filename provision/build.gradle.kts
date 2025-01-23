@@ -62,10 +62,4 @@ dependencies {
     api(libs.constraintlayout) {
         exclude("androidx.appcompat", "appcompat")
     }
-
-    api(
-        fileTree(
-            mapOf("dir" to "libs", "include" to listOf("*-debug.aar"))
-        )
-    )
 }
